@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주간 기상 정보</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: lightblue;
+        }
+        .head {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .weather-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px; /* 카드 사이의 간격을 주기 위해 gap 사용 */
+        }
+
+        .day-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 15px;
+            flex: 1 0 21%; /* PC 버전에서 가로로 4개 */
+            box-sizing: border-box;
+            max-width: 250px;
+            background-color : white;
+        }
+
+        .day-card h3 {
+            margin-top: 0;
+        }
+
+        .day-card p {
+            margin: 5px 0;
+        }
+
+        @media (max-width: 768px) {
+            .day-card {
+                flex: 1 0 46%; /* 태블릿 버전에서 가로로 2개 */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .day-card {
+                flex: 1 0 100%; /* 모바일 버전에서 세로로 1개 */
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h3 class="head"><a href="main_page.html">NewsHub</a></h3>
+    <h1 class="head">주간 기상정보</h1>
+    <div class="weather-container">
+        <!-- 각 요일의 기상 정보를 여기에 입력 -->
+        <div class="day-card">
+            <h3>5.27 월</h3>
+            <p>기온: 25°C</p>
+            <p>습도: 60%</p>
+            <p>날씨: 맑음</p>
+            <img src="./img/sun.png" alt="맑음">
+        </div>
+        <div class="day-card">
+            <h3>5.28 화</h3>
+            <p>기온: 22°C</p>
+            <p>습도: 55%</p>
+            <p>날씨: 흐림</p>
+            <img src="./img/cloud.png" alt="흐림">
+        </div>
+        <div class="day-card">
+            <h3>5.29 수</h3>
+            <p>기온: 20°C</p>
+            <p>습도: 70%</p>
+            <p>날씨: 비</p>
+            <img src="./img/rain.png" alt="비">
+        </div>
+        <div class="day-card">
+            <h3>5.30 목</h3>
+            <p>기온: 24°C</p>
+            <p>습도: 65%</p>
+            <p>날씨: 맑음</p>
+            <img src="./img/sun.png" alt="맑음">
+        </div>
+        <div class="day-card">
+            <h3>5.31 금</h3>
+            <p>기온: 23°C</p>
+            <p>습도: 50%</p>
+            <p>날씨: 흐림</p>
+            <img src="./img/cloud.png" alt="흐림">
+        </div>
+        <div class="day-card">
+            <h3>6.1 토</h3>
+            <p>기온: 26°C</p>
+            <p>습도: 60%</p>
+            <p>날씨: 맑음</p>
+            <img src="./img/sun.png" alt="맑음">
+        </div>
+        <div class="day-card">
+            <h3>6.2 일</h3>
+            <p>기온: 27°C</p>
+            <p>습도: 55%</p>
+            <p>날씨: 맑음</p>
+            <img src="./img/sun.png" alt="맑음">
+        </div>
+    </div>
+</body>
+</html>
